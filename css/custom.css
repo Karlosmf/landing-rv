@@ -1,0 +1,12 @@
+.img-logo{
+    width: auto;
+    height: 16vh;
+}
+
+.nav-blue{
+    background-color: #1d52a1 !important; 
+}
+    
+.header-blue{
+    background: linear-gradient(to bottom, #1d52a1, #6d9ce2); 
+}
