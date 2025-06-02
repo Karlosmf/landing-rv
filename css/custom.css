@@ -11,6 +11,8 @@
     background: linear-gradient(to bottom, #1d52a1, #6d9ce2); 
 }
 
+
+/* Estilos Boton Whatsapp */
 .btn-wsp{
     display:flex;
     justify-content: center;
@@ -48,3 +50,4 @@ a:hover{
     text-decoration: underline;
 
 }
+/* Fin Estilos Boton Whatsapp */

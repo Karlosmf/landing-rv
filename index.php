@@ -1,3 +1,34 @@
+<?php
+$modalidades = [
+    [
+        "title" => "Ciencias Sociales y Humanidades",
+        "image" => "assets/humanidades.webp",
+        "description" => "Comprender la dinámica del mundo natural a través del desarrollo de los
+                            aportes de la Ciencia de la Vida, la Ciencia de la Tierra y la Ciencias
+                            Físico- Químicas.
+                            Observar, analizar y explicar los fenómenos de la Naturaleza con actitud
+                            crítica, responsable y ética.
+                            Manifestar amplitud de criterio frente a opiniones diversas,
+                            comprendiendo el carácter de la Ciencia como una aproximación cambiante
+                            y dinámica, sin dogmas ni verdades absolutas."
+    ],
+    [
+        "title" => "Economía y Administración",
+        "image" => "assets/economia.webp",
+        "description" => "
+Afrontar las nuevas variables y paradigmas, exige desarrollar en los jóvenes sus capacidades para intervenir, operar y estudiar en este ámbito con la convicción y flexibilidad necesarias. La capacitación para esta realidade se basa no sólo en el desarrollo de las tareas afines a la modalidad, sino que se distingue especialmente de la enseñanza estándar en aspectos que fortalecen el perfil de nuestros egresados."
+    ],
+    [
+        "title" => "Ciencias Naturales",
+        "image" => "assets/naturales.webp",
+        "description" => "
+Comprender la dinámica del mundo natural a través del desarrollo de los aportes de la Ciencia de la Vida, la Ciencia de la Tierra y la Ciencias Físico- Químicas. Observar, analizar y explicar los fenómenos de la Naturaleza con actitud crítica, responsable y ética. Manifestar amplitud de criterio frente a opiniones diversas, comprendiendo el carácter de la Ciencia como una aproximación cambiante y dinámica, sin dogmas ni verdades absolutas."
+    ],
+
+]
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -16,36 +47,11 @@
     </head>
     <body class="d-flex flex-column h-100">
         <main class="flex-shrink-0">
-            <!-- Navigation-->
-            <nav class="navbar navbar-expand-lg navbar-dark  nav-blue">
-                <div class="container px-5">
-                    <a class="navbar-brand" href="index.html"> <img src="assets/eesopi-150.png" alt="instituto roberto vicentin" class="img-logo"></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                            <li class="nav-item"><a class="nav-link" href="about.html">Nosotros</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <!-- Header-->
-            <header class="bg-dark py-5 header-blue">
-                <div class="container px-5">
-                    <div class="row gx-5 align-items-center justify-content-center">
-                        <div class="col-lg-8 col-xl-7 col-xxl-6">
-                            <div class="my-5 text-center text-xl-start">
-                                <h1 class="display-5 fw-bolder text-white mb-2">EESOPI N° 8206 </h1>
-                                <h2 class="display-6 fw-bolder text-white mb-2">"Instituto Roberto Vicentin"</h2>
-                                <p class="lead fw-normal text-white-50 mb-4">Más de 30 años educando para la vida. Conocimiento, comunidad y desarrollo integral. Un espacio para crecer, aprender y ser protagonista. </p>
-                                
-                            </div>
-                        </div>
-                        <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="assets/libro-fondo-tablero-verde.webp" alt="Imagen de aula" /></div>
-                    </div>
-                </div>
-            </header>
+
+            <?php include 'navigation.php'; ?>
+
+            <?php include 'header.php'; ?>
+
             <!-- Features section-->
             <section class="py-5" id="features">
                 <div class="container px-5 my-5">
@@ -106,42 +112,18 @@
                         </div>
                     </div>
                     <div class="row gx-5">
+                        <?php foreach ($modalidades as $modalidad) : ?>
                         <div class="col-lg-4 mb-5">
                             <div class="card h-100 shadow border-0">
-                                <img class="card-img-top" src="assets/humanidades.webp" alt="humanidades" />
+                                <img class="card-img-top" src="<?php echo $modalidad['image']; ?>" alt="<?php echo $modalidad['title']; ?>" />
                                 <div class="card-body p-4">
-                                    <a class="text-decoration-none link-dark stretched-link" href="#!"><h5 class="card-title mb-3">Ciencias Sociales y Humanidades</h5></a>
-                                    <p class="card-text mb-0">Comprender y explicar situaciones y procesos individuales y sociales, con un abordaje reflexivo, crítico y responsable desde las perspectivas de las Humanidades y las Ciencias Sociales. El discernimiento moral y el compromiso ético en torno a normas y valores que rigen la vida de las sociedades y los individuos en diferentes espacios y tiempos.</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="col-lg-4 mb-5">
-                            <div class="card h-100 shadow border-0">
-                                <img class="card-img-top" src="assets/economia.webp" alt="economia" />
-                                <div class="card-body p-4">
-                                    <a class="text-decoration-none link-dark stretched-link" href="#!"><h5 class="card-title mb-3">Economía y Administración</h5></a>
-                                    <p class="card-text mb-0">Afrontar las nuevas variables y paradigmas, exige desarrollar en los jóvenes sus capacidades para intervenir, operar y estudiar en este ámbito con la convicción y flexibilidad necesarias. La capacitación para esta realidade se basa no sólo en el desarrollo de las tareas afines a la modalidad, sino que se distingue especialmente de la enseñanza estándar en aspectos que fortalecen el perfil de nuestros egresados.</p>
+                                    <a class="text-decoration-none link-dark stretched-link" href="#!"><h5 class="card-title mb-3"><?php echo $modalidad['title']; ?></h5></a>
+                                    <p class="card-text mb-0"><?php echo $modalidad['description']; ?></p>
                                 </div>
                             </div>
                         </div>
+                        <?php endforeach; ?>
                         <div class="col-lg-4 mb-5">
-                            <div class="card h-100 shadow border-0">
-                                <img class="card-img-top" src="assets/naturales.webp" alt="naturales" />
-                                <div class="card-body p-4">
-                
-                                    <a class="text-decoration-none link-dark stretched-link" href="#!"><h5 class="card-title mb-3">Ciencias Naturales</h5></a>
-                                    <p class="card-text mb-0">Comprender la dinámica del mundo natural a través del desarrollo de los
-                                        aportes de la Ciencia de la Vida, la Ciencia de la Tierra y la Ciencias
-                                        Físico- Químicas.
-                                        Observar, analizar y explicar los fenómenos de la Naturaleza con actitud
-                                        crítica, responsable y ética.
-                                        Manifestar amplitud de criterio frente a opiniones diversas,
-                                        comprendiendo el carácter de la Ciencia como una aproximación cambiante
-                                        y dinámica, sin dogmas ni verdades absolutas.</p>
-                                </div>
-                                
-                            </div>
                         </div>
                     </div>
                     <!-- Call to action-->
@@ -162,22 +144,9 @@
                     </aside> -->
                 </div>
             </section>
-            <a href="https://wa.link/f7lcgs" class="btn-wsp" target="_blank">
-	   <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="none" viewBox="0 0 24 24">
-  <path fill="currentColor" fill-rule="evenodd" d="M12 4a8 8 0 0 0-6.895 12.06l.569.718-.697 2.359 2.32-.648.379.243A8 8 0 1 0 12 4ZM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.96 9.96 0 0 1-5.016-1.347l-4.948 1.382 1.426-4.829-.006-.007-.033-.055A9.958 9.958 0 0 1 2 12Z" clip-rule="evenodd"/>
-  <path fill="currentColor" d="M16.735 13.492c-.038-.018-1.497-.736-1.756-.83a1.008 1.008 0 0 0-.34-.075c-.196 0-.362.098-.49.291-.146.217-.587.732-.723.886-.018.02-.042.045-.057.045-.013 0-.239-.093-.307-.123-1.564-.68-2.751-2.313-2.914-2.589-.023-.04-.024-.057-.024-.057.005-.021.058-.074.085-.101.08-.079.166-.182.249-.283l.117-.14c.121-.14.175-.25.237-.375l.033-.066a.68.68 0 0 0-.02-.64c-.034-.069-.65-1.555-.715-1.711-.158-.377-.366-.552-.655-.552-.027 0 0 0-.112.005-.137.005-.883.104-1.213.311-.35.22-.94.924-.94 2.16 0 1.112.705 2.162 1.008 2.561l.041.06c1.161 1.695 2.608 2.951 4.074 3.537 1.412.564 2.081.63 2.461.63.16 0 .288-.013.4-.024l.072-.007c.488-.043 1.56-.599 1.804-1.276.192-.534.243-1.117.115-1.329-.088-.144-.239-.216-.43-.308Z"/>
-</svg>
-
-	</a>
+            <?php include 'btn-whatsapp.php'; ?>
         </main>
-        <!-- Footer-->
-        <footer class="bg-dark py-4 mt-auto">
-            <div class="container px-5">
-                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-                    <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; InnoDesign 2025</div></div>
-                </div>
-            </div>
-        </footer>
+        <?php include 'footer.php'; ?>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
