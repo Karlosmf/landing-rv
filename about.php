@@ -26,7 +26,7 @@
                                 <h1 class="fw-bolder mb-3">Sobre Nosotros</h1>
                                 <p class="lead fw-normal text-muted mb-4">La Escuela de Educación Secundaria Orientada Particular Incorporada N° 8206 “Roberto Vicentín” fue fundada el 15 de marzo de 1972 en Avellaneda, Santa Fe, por el Prof. Brahim Hacen. Surgió como respuesta a la necesidad de formación del personal femenino, evolucionando con el tiempo hacia una institución educativa integral y de calidad, abierta a todos los sectores sociales y comprometida con la inclusión.
 
-Actualmente, forma parte de un sistema educativo más amplio gestionado por la Asociación Escuela Polieducativa de Avellaneda, que cuenta con seis instituciones educativas de distintos niveles y modalidades. Esta red educativa incluye más de 170 docentes y un equipo interdisciplinario que trabaja por una educación inclusiva, significativa y adaptada a las nuevas realidades sociales y tecnológicas.
+Actualmente, su Representante Legal es la Srita. Silvina Hacen y esta institución forma parte de un sistema educativo más amplio gestionado por la Asociación Escuela Polieducativa de Avellaneda, que cuenta con seis instituciones educativas de distintos niveles y modalidades. Esta red educativa incluye más de 170 docentes y un equipo interdisciplinario que trabaja por una educación inclusiva, significativa y adaptada a las nuevas realidades sociales y tecnológicas.
 
 En la actualidad, la escuela ofrece cinco años de educación secundaria con orientaciones en:
 
